@@ -1,0 +1,27 @@
+
+
+.logo {
+    float: left;
+}
+
+.panier {
+    float: center ;
+    text-align: center;
+    width: 5cm;
+    background-color: #e3eaee;
+}
+
+.compte {
+    float: right;
+    text-align: center;
+    width: 5cm;
+    background-color:#e3eaee;
+}
+
+img {
+    max-width : 10cm;
+    max-height: 3cm;
+    margin: 10px; 
+    background-color:#e3eaee;
+}
+
