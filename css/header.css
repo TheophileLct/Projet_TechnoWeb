@@ -1,27 +1,63 @@
 
 
 .logo {
+    margin: 30px;
     float: left;
 }
 
 .panier {
-    float: center ;
     text-align: center;
-    width: 5cm;
+    float: right;
     background-color: #e3eaee;
+    margin: 70px;
+    font-size: x-large;
+    
 }
 
 .compte {
-    float: right;
+    
     text-align: center;
-    width: 5cm;
     background-color:#e3eaee;
+    float: right;
+    margin : 70px;
+    font-size: x-large;
 }
 
 img {
-    max-width : 10cm;
-    max-height: 3cm;
-    margin: 10px; 
+    max-width : 150px;
+    max-height: 110px;
+    margin: 3px; 
+    margin-bottom: 30px;
     background-color:#e3eaee;
 }
+
+.header {
+    background-color:#e3eaee;
+    height : 150px;
+}
+
+.produit {
+    text-align: center;
+    background-color: navy;
+    height:50px;
+    font-size: x-large;
+    color: #e3eaee;
+  
+}
+
+/* .img-compte {
+    text-align: center;
+    max-width : 20px;
+    max-height: 10px;
+    margin: 3px; 
+    background-color:#e3eaee;
+}
+.img-panier{
+    text-align: center;
+    max-width : 10%;
+    max-height: 5%;
+    margin: 3px; 
+    background-color:#e3eaee;
+} */
+
 
