@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/product.css" />
 </head>
 <body>
+    <?php include 'header.php'?>
     <header>
         <!-- Importer le header en php -->
     </header>
@@ -36,7 +37,7 @@
     </section>
 
     <footer>
-        <!-- Importer le footer en php -->
+    <?php include 'footer.php'?>
     </footer>
 </body>
 

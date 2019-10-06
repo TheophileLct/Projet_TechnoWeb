@@ -11,10 +11,20 @@
            
           
         <div class='logo'>
-           <a target="_blank" href = "product.html"   >
+           <a target="_blank" href = "product.php"   >
             <img src="img/logo.png" alt="logo"  >
             </a>
         </div>
+
+       <div id="searchbar">
+               
+               <h1>What would you like to search?</h1>
+               <form action="" class="formulaire">
+               <input class="champ" type="text" placeholder="Search..."/>
+                    <input class="bouton" type="button" value=" " />
+                    
+                </form>
+                </div>
 
         <div class='panier'>
                  <!-- <div class='img-panier'>
@@ -36,7 +46,7 @@
         </div>
         
         <div class='produit'>
-            <a href="product.html" style="text-decoration: none ; color: #e3eaee"> Product </a>
+            <a href="product.php" style="text-decoration: none ; color: #e3eaee"> Product </a>
             </div> 
 
        

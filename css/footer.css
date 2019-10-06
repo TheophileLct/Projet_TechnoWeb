@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    color: antiquewhite ; 
+    font-size: medium; 
+    margin: 25px;
+    background-color:  rgb(46, 45, 44);
+}
+
+
+.pied {
+    background-color: rgb(46, 45, 44);
+    height: 150px;
+}
