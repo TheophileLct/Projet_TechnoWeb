@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="css/search.css" />
+    <?php include 'header.php'?>
 </head>
 
 <body>
@@ -20,5 +21,5 @@
 
 
 </body>
-
+<footer> <?php include 'footer.php'?></footer>
 </html>

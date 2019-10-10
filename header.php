@@ -31,7 +31,7 @@
                         <img src="img/cart.png" alt="logo" >
                    </div> -->
 
-                <a href="cart.html" style="text-decoration: none ; color: navy "> Cart</a>
+                <a href="cart.html" style="text-decoration: none ; color: black"> Cart</a>
     
             </div>
 
@@ -40,7 +40,7 @@
                         <img src="img/compte.png" alt="logo"  >
                    </div> -->
 
-            <a href="account.html" style="text-decoration: none; color: navy"> Account </a>
+            <a href="account.html" style="text-decoration: none; color: black"> Account </a>
 
         </div> 
         </div>

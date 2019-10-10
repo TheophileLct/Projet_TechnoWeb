@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="css/product.css" />
 </head>
 <body>
-    <?php include 'header.php'?>
+   
     <header>
-        <!-- Importer le header en php -->
+    <?php include 'header.php'?>
     </header>
     <section>
         <img id="T-shirt_Double_coton" src="img/T_shirt_1.jpg" alt="Image de notre magnifique T-shirt"/> 
