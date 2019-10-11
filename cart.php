@@ -26,7 +26,7 @@
                 </FORM>
             </div> 
         <div class="quantity">Quantity: <input class="number" type="number" value="1" min="0" max="99"> </div>
-        <div class="price"> 50 € </div>
+        <div class="price"> 59 € </div>
         </aside>
     </section>
 
@@ -48,7 +48,7 @@
                 </FORM>
             </div> 
             <div class="quantity">Quantity: <input class="number" type="number" value="1" min="0" max="99"> </div>
-            <div class="price"> 135 € </div>
+            <div class="price"> 59 € </div>
         </aside>
     </section>
 
@@ -70,14 +70,14 @@
                 </FORM>
             </div> 
             <div class="quantity">Quantity: <input class="number" type="number" value="1" min="0" max="99"> </div>
-            <div class="price"> 90 € </div>
+            <div class="price"> 69 € </div>
         </aside>
     </section>
 
     <section>
         <h1>Votre Commande:</h1>
         <h2><p>Vous avez acheté 3 produits pour un total de:</p></h2>
-        <div class="price_final"> 300 € </div>
+        <div class="price_final"> 200 € </div>
         <input class="bouton_1" type="button" value="Valider" />
     </section>
 

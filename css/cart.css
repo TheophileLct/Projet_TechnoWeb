@@ -3,6 +3,12 @@ h2{
     text-align: center;
 }
 
+h6{
+    margin-right: 50%;
+    font-size: 20px;
+    text-align: left;
+}
+
 section {
     width: auto; 
     margin: auto; 
