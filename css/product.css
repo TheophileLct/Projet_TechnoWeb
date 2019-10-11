@@ -23,7 +23,7 @@ img {
     margin-left: 1000px;
 }
 
-.aside{
+aside{
     flex: 1.2;
     position: relative;
     background-color: #e7e7e7;
