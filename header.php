@@ -20,7 +20,7 @@
        <div id="searchbar">
                <form action="" class="formulaire">
                <input class="champ" type="text" placeholder="Search..."/>
-                    <input class="bouton" type="button" value=" " />
+                    <input class="bouton" type="button" value="Search" />
                     
                 </form>
                 </div>
