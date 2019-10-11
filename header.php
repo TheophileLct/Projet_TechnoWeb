@@ -12,13 +12,13 @@
           
         <div class='logo'>
            <a target="_blank" href = "product.php"   >
-            <img src="img/logo.png" alt="logo"  >
+            <img src="img/Logo_Diabolo_2.JPG" alt="logo"  >
             </a>
         </div>
 
        <div id="searchbar">
                
-               <h1>What would you like to search?</h1>
+               <h1>Que cherchez-vous ?</h1>
                <form action="" class="formulaire">
                <input class="champ" type="text" placeholder="Search..."/>
                     <input class="bouton" type="button" value=" " />
@@ -31,7 +31,7 @@
                         <img src="img/cart.png" alt="logo" >
                    </div> -->
 
-                <a href="cart.html" style="text-decoration: none ; color: black"> Cart</a>
+                <a href="cart.php" style="text-decoration: none ; color: black"> Panier</a>
     
             </div>
 
@@ -40,13 +40,13 @@
                         <img src="img/compte.png" alt="logo"  >
                    </div> -->
 
-            <a href="account.html" style="text-decoration: none; color: black"> Account </a>
+            <a href="account.php" style="text-decoration: none; color: black"> Compte </a>
 
         </div> 
         </div>
         
         <div class='produit'>
-            <a href="product.php" style="text-decoration: none ; color: #e3eaee"> Product </a>
+            <a href="product.php" style="text-decoration: none ; color: white"> Produit </a>
             </div> 
 
        
