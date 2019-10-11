@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="css/account.css" />
     <?php include 'header.php'?>
     
 </head>
