@@ -1,0 +1,41 @@
+h2{
+    font-size: 20px;
+    text-align: center;
+}
+
+section {
+    width: auto; 
+    margin: auto; 
+    border: 2px solid rgb(143, 143, 143);
+    box-shadow: 0px 3px 7px #000000;
+    text-align: justify;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+img {
+	width: 100px;
+    max-height: 200px;
+    float:left;
+}
+
+.bouton{
+    margin-left: 90%;
+    width: 60px;
+}
+
+.price {
+    font-size: 20px;
+    width:50px;
+    margin-left: 1000px;
+}
+
+aside{
+    flex: 1.2;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    overflow:hidden;
+}
