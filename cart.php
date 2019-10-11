@@ -80,7 +80,7 @@
     <section>
         <h1>Votre Commande</h1>
         <h2><p>Vous avez acheté 3 produits pour un total de:</p></h2>
-        <div class="price"> 300 € </div>
+        <div class="price_final"> 300 € </div>
         <input class="bouton" type="button" value="Valider" />
     </section>
 

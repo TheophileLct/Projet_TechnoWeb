@@ -20,7 +20,7 @@ img {
 }
 
 .bouton{
-    margin-left: 90%;
+    margin-left: 47.5%;
     width: 60px;
 }
 
@@ -42,6 +42,13 @@ img {
 }
 
 .price {
+    font-size: 20px;
+    width:50px;
+    padding-top: 1%;
+    margin-left: 95%;
+}
+
+.price_final {
     font-size: 20px;
     width:50px;
     padding-top: 1%;
