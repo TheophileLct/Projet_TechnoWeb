@@ -31,7 +31,7 @@
                         <img src="img/cart.png" alt="logo" >
                    </div> -->
 
-                <a href="cart.html" style="text-decoration: none ; color: black"> Cart</a>
+                <a href="cart.php" style="text-decoration: none ; color: black"> Cart</a>
     
             </div>
 
@@ -40,13 +40,13 @@
                         <img src="img/compte.png" alt="logo"  >
                    </div> -->
 
-            <a href="account.html" style="text-decoration: none; color: black"> Account </a>
+            <a href="account.php" style="text-decoration: none; color: black"> Account </a>
 
         </div> 
         </div>
         
         <div class='produit'>
-            <a href="product.php" style="text-decoration: none ; color: #e3eaee"> Product </a>
+            <a href="product.php" style="text-decoration: none ; color: antiquewhite"> Product </a>
             </div> 
 
        
