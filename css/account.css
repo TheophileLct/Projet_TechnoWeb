@@ -2,16 +2,18 @@
     
     width: 300px;
     border: 2px solid;
-    margin-top : 170px;
-    margin-left: 8cm;
+    margin-top : 10px;
+    margin-left: 15cm;
+    text-align: center;
 }
 
 #create {
     
     width: 300px;
     border: 2px solid;
-    margin-top : 170px;
-    margin-right:  8cm;
+    margin-top : 10px;
+    margin-left:  15cm;
+    text-align: center;
 }
 
 h1 {
@@ -38,4 +40,5 @@ h2 {
     font: normal 26px/1 Verdana, Helvetica;
     position: relative;
 }
+
 
