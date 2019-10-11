@@ -32,8 +32,9 @@ img {
 }
 
 .header {
-    background-color:white;
-    height : 150px;
+    background-color: transparent;
+    height : 200px;
+    background-image: url(https://www.charlott.fr/wp-content/uploads/2018/07/contact-header-bkg.jpg);
 }
 
 .produit {
