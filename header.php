@@ -13,7 +13,7 @@
           
         <div class='logo'>
            <a target="_blank" href = "product.php"   >
-            <img src="img/Logo_Diabolo_2.png" alt="logo"  >
+            <img src="img/Logo_Diabolo_2.png" alt="logo" class=logo >
             </a>
         </div>
 
