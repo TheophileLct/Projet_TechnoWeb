@@ -1,5 +1,4 @@
 
-
 .section
 {
     width: auto; 
@@ -11,9 +10,9 @@
     margin-bottom: 20px;
 }
 
-img {
-	width: 500;
-    height: 500;
+img{
+	width: 250px;
+    height: 255px;
     float:left;
 }
 
@@ -31,4 +30,10 @@ aside{
     padding: 10px;
     color: indigo;
     overflow:hidden;
+}
+
+.size{
+    font-size: 20px;
+    padding-bottom: 1%;
+    margin-left: 85%;
 }
