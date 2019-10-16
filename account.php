@@ -24,12 +24,10 @@
 </center>
 
 <center>
-    <form id="create">
+    <form id="create" action="conf_form.php" method="post">
         <h2>Create</h2>
         <fieldset id="inputs">
-         <input id="name" type="text" placeholder="Nom" autofocus required> 
-            <h2></h2>
-            <input id="surname" type="text" placeholder="Prénom" autofocus required> 
+         <input id="username" type="text" placeholder="Username" autofocus required> 
             <h2></h2>
             <input id="email" type="text" placeholder="E-mail" autofocus required> 
             <h2></h2>
