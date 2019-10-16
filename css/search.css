@@ -1,0 +1,4 @@
+#searchbar { width: 100%; text-align: center; }
+.formulaire               {display:inline-block;}
+.formulaire .champ       {width:600px; height:35px;}
+.formulaire .bouton       { background-image: url(searchbar_button.jpg);background-repeat: no-repeat; background-size: auto; width: 35px;height: 35px;padding: 0; }
