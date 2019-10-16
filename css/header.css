@@ -1,4 +1,3 @@
-
 .logo {
     margin: 30px;
     float: left;
@@ -8,28 +7,26 @@
 .panier {
     text-align: center;
     float: right;
-    background-color: white;
     margin-right: 70px;
-    margin-top: 50px;
+    margin-top: 70px;
     font-size: large;
     
 }
 
 .compte {
-    margin-top: 50px;
+    margin-top: 70px;
     text-align: center;
-    background-color:white;
     float: right;
     margin-right : 70px;
     font-size: large;
 }
 
-img {
+img.logo {
     max-width : 350px;
     max-height: 110px;
     margin: 3px; 
     margin-bottom: 30px;
-    background-color:white;
+  
 }
 
 .header {
@@ -49,15 +46,25 @@ img {
 }
 
 #searchbar {  text-align: center;
-float: center; }
-.formulaire               {display:inline-block;}
-.formulaire .champ       {width:300px; height:25px;}
-.formulaire .bouton       { background-image: url(searchbar_button.jpg);background-repeat: no-repeat; background-size: auto; width: 35px;height: 35px;padding: 0; }
-
-h1 {
-    font-size: medium;
-    text-align: center;
-    
+    float: left; 
 }
 
+.formulaire{
+    display:inline-block;
+}
+.formulaire .champ{
+    width:300px; 
+    height:25px;
+}
+.formulaire .bouton{ 
+    background-image: url(searchbar_button.jpg);
+    background-repeat: no-repeat; background-size: auto;
+    width: 50px;
+    height: 35px;
+    padding: 0;
+}
+
+a.test {
+    margin: 100px;
+}
 
