@@ -9,7 +9,7 @@
                 <h4>About</h4>
                 <h4>Contact Us</h4>
                 <h4>Privacy Policy</h4>     
-                <h4> <a href="search.php" style="text-decoration: none ; color: white"> Recherche</a> </h4>
+                <h4> <a href="search.php" style="text-decoration: none ; color: pink"> Recherche</a> </h4>
         </div>
 </body>
 </html>
