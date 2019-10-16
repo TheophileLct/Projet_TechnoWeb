@@ -1,46 +1,60 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Diabolo</title>
-    <link rel="stylesheet" href="css/product.css" />
-</head>
-<body>
-   
-    <header>
-    <?php include 'header.php'?>
     </header>
 
     <div class="section">
-        <img id="T-shirt_Double_coton" src="img/T_shirt_1.jpg" alt="Image de notre magnifique T-shirt"/> 
+        <img id="Monica" src="img/Produit_1.jpg" alt="Soutien-gorge avec armatures"/> 
+        <img id="Monica" src="img/Produit_1.jpg" alt="Soutien-gorge avec armatures0"/> 
         <aside>
-            <h1>T-shirt</h1>
-            <div class="price"> 50 € </div>
-            <p>Confectionné en jersey doux, notre version du t-shirt à col rond arbore une coupe ajustée et a été délavé pour un look usé.</p>
+            <h1>Monica - Soutien-gorge avec armatures </h1>
+            <div class="size">Taille:
+                <FORM>
+                    <SELECT name="size" size="1">
+                        <OPTION>90B
+                        <OPTION>90C
+                        <OPTION>90D
+                        <OPTION selected>90E
+                        <OPTION>90F
+                    </SELECT>
+                </FORM>
+            </div> 
+        <div class="quantity">Quantité: <input class="number" type="number" value="1" min="0" max="99"> </div>
+            <div class="price"> 59 € </div>
+            <p>Moderne et féminin, voici l’iconique Soutien-gorge avec armatures, en dentelle 100% française. forme corbeille emboîtant. Dos cheminée et doublure renforcée. Confére un très bon maintien. Convient davantage aux potrines moyennes à généreuses. Disponible jusqu'au bonnet F.</p>
         </aside>
-    </div>
-
-    <div class="section">
-        <img id="Pull_rapide" src="img/Pull_1.jpg" alt="Image de notre magnifique pull"/>
+@ -23,6 +35,18 @@
+        <img id="Josephine" src="img/Produit_2.jpg" alt="Soutien-gorge avec armatures"/>
         <aside>
-            <h1>Sweat-capuche</h1>
-            <div class="price"> 135 € </div>
-            <p>Ce sweat à capuche à cordon de serrage en molleton dans la palette de couleurs éclatantes de la saison est rehaussé de notre broderie Big Pony distinctive, pour une finition traditionnelle. </p>
+            <h1>Josephine - Soutien-gorge avec armatures </h1>
+            <div class="size">Taille:
+                <FORM>
+                    <SELECT name="size" size="1">
+                        <OPTION>90B
+                        <OPTION>90C
+                        <OPTION>90D
+                        <OPTION selected>90E
+                        <OPTION>90F
+                    </SELECT>
+                </FORM>
+            </div> 
+        <div class="quantity">Quantité: <input class="number" type="number" value="1" min="0" max="99"> </div>
+            <div class="price"> 59 € </div>
+            <p>La nouvelle dentelle française. Soutien-gorge avec armatures, en dentelle 100% française, stretch et douce. Motif floral et géométrique délicat. Forme emboitante pour un maintien optimal jusqu'au bonnet F. Modèle sans coques. Excellent maintien. Convient à toutes les poitrines.<p>
         </aside>
-    </div>
-
-    <div class="section">
-        <img id="Jogging de procrastination" src="img/jogging_1.jpg" alt="Image de notre magnifique jogging"/>
+@ -32,6 +56,18 @@
+        <img id="Chic" src="img/Produit_3.jpg" alt="Soutien-gorge corbeille"/>
         <aside>
-            <h1>Jogging</h1>
-            <div class="price"> 90 € </div>
-            <p> Élégant et sportif grâce à son tissu doux en tricot double, ce pantalon de jogging sera idéal pour vos séances d'entraînement ou pour se détendre le week-end. </p>
+            <h1>Chic - Soutien-gorge corbeille</h1>
+            <div class="size">Taille:
+                <FORM>
+                    <SELECT name="size" size="1">
+                        <OPTION>90B
+                        <OPTION>90C
+                        <OPTION>90D
+                        <OPTION selected>90E
+                        <OPTION>90F
+                    </SELECT>
+                </FORM>
+            </div> 
+        <div class="quantity">Quantité: <input class="number" type="number" value="1" min="0" max="99"> </div>
+            <div class="price"> 69 € </div>
+            <p> La dentelle Leavers Soutien-gorge corbeille, en dentelle française, strech et douce. Festons de dentelle sophistiqués. Bonnets doublés pour un maintien renforcé. Modèle avec armatures, sans coques. Bon maintien. Convient à toutes les poitrines.</p>
         </aside>
-    </div>
-
-    <footer>
-    <?php include 'footer.php'?>
-    </footer>
-</body>
-
-
-</html>
