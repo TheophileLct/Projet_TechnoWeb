@@ -31,9 +31,15 @@
             </div>
 
         <div class='compte'>
-            <a href="account.php" style="text-decoration: none; color: black"> Compte </a>
+            <a href="account.php" style="text-decoration: none; color: black"> Login/Sign In </a>
 
         </div> 
+
+        <div class='moncompte'>
+            <a href="myaccount.php" style="text-decoration: none; color: black"> Mon Compte </a>
+
+        </div> 
+
         </div>
         
         <div class='produit'>
