@@ -21,6 +21,15 @@
     font-size: large;
 }
 
+.moncompte {
+    margin-top: 70px;
+    text-align: center;
+    float: right;
+    margin-right : 30px;
+    font-size: large;
+}
+
+
 img.logo {
     max-width : 350px;
     max-height: 110px;
