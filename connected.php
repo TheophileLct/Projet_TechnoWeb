@@ -19,7 +19,11 @@ try {
         $donnees1 = $req1->fetch();
         if ($donnees1) 
         {
-            echo 'Connecté';
+            session_start ();
+
+            $_SESSION['login'] = $_POST["username1"];
+            $_SESSION['password'] = $_POST["password1"];
+            header ('location: product.php');
         }
         else{
             echo 'Mot de passe FAUX';
