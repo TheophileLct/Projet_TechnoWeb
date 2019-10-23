@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Diabolo</title>
     <link rel="stylesheet" href="css/account.css" />
     <?php include 'header.php'?>
 </head>
