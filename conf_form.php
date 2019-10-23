@@ -8,7 +8,7 @@ $password1 = $_POST["password"];
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "bddprojet";
 
 try {
