@@ -14,8 +14,8 @@ try {
     $donnees = $req->fetch();
     if ($donnees) 
     {
-        $req1 = $conn->prepare('SELECT password FROM users WHERE password = :password');
-        $req1->execute(array(':password'=>$password1));
+        $req1 = $conn->prepare('SELECT password FROM users WHERE username = :username');
+        $req1->execute(array(':username'=>$username1));
         $donnees1 = $req1->fetch();
         if ($donnees1) 
         {
