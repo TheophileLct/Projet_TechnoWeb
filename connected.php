@@ -4,7 +4,7 @@ $username1 = $_POST["username1"];
 $password1 = $_POST["password1"];
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "bddprojet";
 
 try {
@@ -15,7 +15,7 @@ try {
     if ($donnees) 
     {
         $req1 = $conn->prepare('SELECT password FROM users WHERE username = :username');
-        $req->execute(array(':username'=>$username1));
+        $req1->execute(array(':username'=>$username1));
         $donnees1 = $req1->fetch();
         if ($donnees1) 
         {
