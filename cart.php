@@ -43,6 +43,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/cart.css" />
+        <title>Diabolo</title>
     </head>
     <body>
     

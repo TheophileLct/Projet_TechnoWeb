@@ -2,7 +2,8 @@
 <html>
     <head>
     <link rel="icon" type="image/png" href="img/Logo_Diabolo_2.png" />
-        <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <title>Diabolo</title>
     </head>
 
 

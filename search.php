@@ -4,6 +4,7 @@
 <head>
 	<link rel="stylesheet" href="css/search.css" />
     <?php include 'header.php'?>
+    <title>Diabolo</title>
 </head>
 
 <body>
