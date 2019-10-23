@@ -17,7 +17,8 @@ try {
         $req1 = $conn->prepare('SELECT password FROM users WHERE username = :username');
         $req1->execute(array(':username'=>$username1));
         $donnees1 = $req1->fetch();
-        if ($donnees1) 
+
+    if ($donnees1["password"]==$password1) 
         {
             session_start ();
 
