@@ -21,9 +21,9 @@
             <input type="submit" id="submit" value="Se connecter">
         </fieldset>
     </form>
-</center>
+    </center>
 
-<center>
+    <center>
     <form id="create" action="conf_form.php" method="post">
         <h2>Create</h2>
         <fieldset id="inputs">
@@ -39,7 +39,7 @@
             <input type="submit" id="submit" value="Créer">
         </fieldset>
         </form>
-</center>
+    </center>
 </body>
 
 <footer>
