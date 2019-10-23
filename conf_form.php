@@ -19,7 +19,7 @@ try {
     VALUES ('$username1','$email', '$password1')";
     // use exec() because no results are returned
     $conn->exec($sql);
-    echo "New record created successfully";
+    /*echo "New record created successfully";*/
     }
 catch(PDOException $e)
     {
