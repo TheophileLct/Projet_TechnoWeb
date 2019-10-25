@@ -1,3 +1,14 @@
+<?php
+    try {
+        session_start ();
+        include "bdd.php";
+    }
+
+    catch(PDOException $e){
+        echo $sql . "<br>" . $e->getMessage();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
