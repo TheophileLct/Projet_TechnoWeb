@@ -51,6 +51,7 @@
             </div> 
         <div class="quantity">Quantité: <input class="number" type="number" value="1" min="0" max="99"> </div>
             <div class="price"> 59 € </div>
+            <div class="quantity"><input type="submit" id="submit" value="Ajouter au panier"> </div>
             <p>La nouvelle dentelle française. Soutien-gorge avec armatures, en dentelle 100% française, stretch et douce. Motif floral et géométrique délicat. Forme emboitante pour un maintien optimal jusqu'au bonnet F. Modèle sans coques. Excellent maintien. Convient à toutes les poitrines.<p>
         </aside>
     </div>
@@ -72,6 +73,7 @@
             </div> 
         <div class="quantity">Quantité: <input class="number" type="number" value="1" min="0" max="99"> </div>
             <div class="price"> 69 € </div>
+            <div class="quantity"><input type="submit" id="submit" value="Ajouter au panier"> </div>
             <p> La dentelle Leavers Soutien-gorge corbeille, en dentelle française, strech et douce. Festons de dentelle sophistiqués. Bonnets doublés pour un maintien renforcé. Modèle avec armatures, sans coques. Bon maintien. Convient à toutes les poitrines.</p>
         </aside>
     </div>
