@@ -13,12 +13,16 @@
         $req->execute(Array($NOM));
         $donnees = $req->fetch();
 
-        $req1 = $conn->prepare('SELECT name, description, products.unit_price, order_products.quantity FROM products, order_products, orders WHERE (orders.type = "CART" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
+        $req1 = $conn->prepare('SELECT name, description, products.unit_price, order_products.quantity, products.id FROM products, order_products, orders WHERE (orders.type = "CART" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
         $req1->execute(Array($donnees[0]));
 
         $req2 = $conn->prepare('SELECT SUM(products.unit_price*order_products.quantity) FROM products, order_products, orders WHERE (orders.type = "CART" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
         $req2->execute(Array($donnees[0]));
-        $donnees2 = $req2->fetch();
+        $Price_Total = $req2->fetch();
+
+        $req3 = $conn->prepare('SELECT SUM(order_products.quantity) FROM products, order_products, orders WHERE (orders.type = "CART" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
+        $req3->execute(Array($donnees[0]));
+        $Quantity = $req3->fetch();
     }
 
     catch(PDOException $e){
@@ -45,7 +49,8 @@
             while ($data = $req1->fetch()) {
         ?>
             <section>
-                <img id="Monica" src="img/Produit_1.jpg" alt="Soutien-gorge avec armatures"/> 
+            <?php $img_src = "img/Produit_".$data[3].".jpg" ?>
+                <img id="Monica" src=<?php echo $img_src ?> alt="Soutien-gorge avec armatures"/> 
                 <aside>
                 <h1><?php echo $data[0] ?></h1>
                 <p><?php echo $data[1] ?></p>
@@ -69,8 +74,8 @@
 
         <section>
             <h1>Votre Commande:</h1>
-            <h2><p>Vous avez acheté 3 produits pour un total de:</p></h2>
-            <div class="price_final"> <?php echo $donnees2[0]; ?>€ </div>
+            <h2><p>Vous avez <?php echo $Quantity[0]; ?> produits pour un total de:</p></h2>
+            <div class="price_final"> <?php echo $Price_Total[0]; ?>€ </div>
             <input class="bouton_1" type="button" value="Valider" />
         </section>
 
