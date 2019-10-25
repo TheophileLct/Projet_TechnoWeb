@@ -6,14 +6,18 @@ $id=$_POST[""];
 echo 'vous avez selectionné ';
 
 try {
+    session_start();
     include "bdd.php";
 
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO order_products (quantity, )
-    VALUES (1, )";
-   
-    $conn->exec($sql);
-    echo "New record created successfully";
+    $req = $conn->prepare('SELECT username FROM users WHERE username = :username');
+    $req->execute(array(':username'=>$username1));
+    $donnees = $req->fetch();
+    if ($donnees) 
+    {
+        $req1 = $conn->prepare('SELECT password FROM users WHERE username = :username');
+        $req1->execute(array(':username'=>$username1));
+        $donnees1 = $req1->fetch();
+
     }
 catch(PDOException $e)
     {

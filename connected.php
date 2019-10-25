@@ -21,6 +21,13 @@ try {
 
             $_SESSION['login'] = $_POST["username1"];
             $_SESSION['password'] = $_POST["password1"];
+            $req2 = $conn->prepare('SELECT id FROM users WHERE username = :username');
+            $req2->execute(array(':username'=>$username1));
+            $donnees2 = $req2->fetch();
+
+            $_SESSION['id']= $donnees2['id'];
+            echo $_SESSION['id'];
+
             header ('location: product.php');
         }
         else{
