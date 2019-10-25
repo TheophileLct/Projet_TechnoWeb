@@ -2,13 +2,10 @@
 
 $username1 = $_POST["username1"];
 $password1 = $_POST["password1"];
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bddprojet";
+
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    include "bdd.php";
     $req = $conn->prepare('SELECT username FROM users WHERE username = :username');
     $req->execute(array(':username'=>$username1));
     $donnees = $req->fetch();
