@@ -26,21 +26,16 @@
                 </form>
                 </div>
 
-            <div class="connexion">
-                <div>
-                <label for="username">Pseudo :</label>
-                <input type="text" id="username" name="username">
-            </div>
-
-            <div>
-                <label for="pass">Mot de passe :</label>
-                <input type="password" id="pass" name="password"
-                    minlength="8" required>
-            </div>
-        
-
-        <input type="submit" value="Sign in">
-        </div>
+            <form id="login" action="connected.php" method="post">
+        <fieldset id="inputs">
+            <input name="username1"  id="username" type="text" placeholder="Username" autofocus required>  
+            <h1></h1>
+            <input name="password1" id="password" type="password" placeholder="Mot de Passe" autofocus required>
+        </fieldset>
+        <fieldset id="actions">
+            <input type="submit" id="submit" value="Se connecter">
+        </fieldset>
+    </form>
 
 
         </div>
