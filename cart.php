@@ -9,35 +9,29 @@
         session_start ();
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $NOM = $_SESSION['login'];
-        $req = $conn->prepare('SELECT id FROM users WHERE username ="'.$NOM.'"');
-        $req->execute();
+        $req = $conn->prepare('SELECT id FROM users WHERE username = ?');
+        $req->execute(Array($NOM));
         $donnees = $req->fetch();
-        $req1 = $conn->prepare('SELECT name, description, prod.unit_price, ord_prod.quantity FROM products prod, order_products ord_prod, orders ord WHERE (ord.type = "CART" AND ord_prod.order_id = ord.id AND prod.id = ord_prod.product_id AND ord.user_id ="'.$donnees[0].'")');
-        $req1->execute();
-        $donnees1 = $req1->fetch();
-        if ($donnees1) {
-            $k = 0;
-            $Name = [];
-            $Description = [];
-            $Price =  [];
-            $Quantity = [];
-            foreach($donnees1 as $elem){
-                if($k<sizeof($donnees1)/4){
-                    array_push($Name, $elem);
-                }else{
-                    if($k<2*sizeof($donnees1)/4){
-                        array_push($Description, $elem);
-                    }else{
-                        if($k<3*sizeof($donnees1)/4){
-                            array_push($Price, $elem);
-                        }else{
-                            array_push($Quantity, $elem);
-                        }
-                    }
-                }
-                $k++;
+
+        $req1 = $conn->prepare('SELECT name, description, products.unit_price, order_products.quantity FROM products, order_products, orders WHERE (orders.type = "CART" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
+        $req1->execute(Array($donnees[0]));
+
+        $req2 = $conn->prepare('SELECT SUM(products.unit_price*order_products.quantity) FROM products, order_products, orders WHERE (orders.type = "CART" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
+        $req2->execute(Array($donnees[0]));
+        $donnees2 = $req2->fetch();
+        echo $donnees2[0];
+
+        $Name = [];
+        $Description = [];
+        $Price =  [];
+        $Quantity = [];
+        while($donnees1 = $req1->fetch()){
+                array_push($Name, $donnees1[0]);
+                array_push($Description, $donnees1[1]);
+                array_push($Price, $donnees1[2]);
+                array_push($Quantity, $donnees1[3]);
             }
-            for($k=0;$k<sizeof($Name);$k++){
+            /*for($k=0;$k<sizeof($Name);$k++){
                 echo $Name[$k];
                 echo "  ";
                 echo $Description[$k];
@@ -46,11 +40,8 @@
                 echo "  ";
                 echo $Quantity[$k];
                 echo "  ";
-            }
-        }else{
-            print("PAS OK");
+            }*/
         }
-    }
 
     catch(PDOException $e){
         echo $sql . "<br>" . $e->getMessage();
