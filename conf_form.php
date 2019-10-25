@@ -6,14 +6,9 @@ $password1 = $_POST["password"];
 
 /*echo 'Bonjour '. $username1 .'votre compte est créé' ;*/
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "bddprojet";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  
+    include "bdd.php";
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "INSERT INTO users (username,email,password)
     VALUES ('$username1','$email', '$password1')";
