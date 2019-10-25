@@ -19,16 +19,6 @@
     margin-right: 60px;
 }
 
-label {
-    display: block;
-    font: .9rem 'Fira Sans', sans-serif;
-}
-
-input[type='submit'],
-
-label {
-    margin-top: 1rem;
-}
 
 .compte {
     margin-top: 70px;
@@ -92,7 +82,7 @@ img.logo {
     padding: 0;
 }
 
-a.test {
+a.test { 
     margin: 100px;
 }
 

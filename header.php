@@ -26,7 +26,8 @@
                 </form>
                 </div>
 
-            <form id="login" action="connected.php" method="post">
+    <div class = connexion >
+        <form id="login1" action="connected.php" method="post">
         <fieldset id="inputs">
             <input name="username1"  id="username" type="text" placeholder="Username" autofocus required>  
             <h1></h1>
@@ -37,7 +38,7 @@
         </fieldset>
     </form>
 
-
+    </div>
         </div>
         
         <div class='produit'>
