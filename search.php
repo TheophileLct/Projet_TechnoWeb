@@ -9,9 +9,12 @@
 
 <body>
  	
-     <div class= recherche>
-        <p> FAITE VOTRE RECHERCHE DANS LA BARRE DE RECHERCHE</p>
-                </div>
+<div id="searchbar">
+    <form action="" class="formulaire">
+    <input class="champ" type="text" placeholder="Search..."/>
+    <input class="bouton" type="button" value="Search" />                
+    </form>
+</div>
 
 </body>
 
