@@ -14,13 +14,10 @@ $ville = $_POST["city"];
 
 echo 'ur account has been updated';
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bddprojet";
+
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    include "bdd.php";
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $NOM = $_SESSION['login'];
     $req = $conn->prepare('SELECT id FROM user_addresses WHERE human_name ="' . $NOM . '"');
