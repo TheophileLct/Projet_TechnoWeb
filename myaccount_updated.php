@@ -31,3 +31,30 @@ try {
 }
 
 $conn = null;
+
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/confirmation_creation_compte.css" />
+    <?php include 'header.php' ?>
+    <title>Diabolo</title>
+</head>
+
+<body>
+    </br>
+    </br>
+    </br>
+    <h1>Your account has succesfuly been updated</h1>
+    </br>
+</body>
+
+<footer>
+    <?php include 'footer.php' ?>
+</footer>
+
+</html>
