@@ -26,7 +26,6 @@ try {
             $donnees2 = $req2->fetch();
 
             $_SESSION['id']= $donnees2['id'];
-            echo $_SESSION['id'];
 
             header ('location: product.php');
         }
