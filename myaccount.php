@@ -3,7 +3,6 @@
 session_start();
 
 if (empty($_SESSION['login'])) {
-  // Si inexistante ou nulle, on redirige vers le formulaire de login
   header('Location: account.php');
   exit();
 }
@@ -22,11 +21,10 @@ if (empty($_SESSION['login'])) {
   <center>
     <form id="user_address" action="myaccount_updated.php" method="post">
       <h1><?php
-          // Ici on est bien loggué, on affiche un message
           echo 'Bienvenue ', $_SESSION['login'];
           ?></h1>
       <fieldset id="inputs">
-        <input name="billing_adress" id="username" type="text" placeholder="Adresse de livraison" autofocus required>
+        <input name="billing_address" id="username" type="text" placeholder="Adresse de livraison" autofocus required>
         <h1></h1>
         <input name="billing_address2" id="password" type="text" placeholder="Complément d'adresse" autofocus required>
         <h1></h1>
