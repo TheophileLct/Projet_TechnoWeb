@@ -1,9 +1,13 @@
 <?php
 
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "bddprojet";
 
     try {
         session_start ();
-        include "bdd.php";
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $NOM = $_SESSION['login'];
         $req = $conn->prepare('SELECT id FROM users WHERE username = ?');
         $req->execute(Array($NOM));

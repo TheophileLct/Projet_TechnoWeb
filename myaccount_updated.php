@@ -8,9 +8,13 @@ $ville = $_POST["city"];
 
 echo 'ur account has been updated';
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "bddprojet";
 
 try {
-    include "bdd.php";
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
  
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "INSERT INTO user_addresses (address_one,address_two,postal_code,city, country)
