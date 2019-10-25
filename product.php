@@ -41,10 +41,10 @@ $conn = null;
         ?>
 
     <div class="section">
-        <?php $img_src = "img/Produit_".$data[3].".jpg" ?>
+        <?php $img_src = "img/Produit_".$data["id"].".jpg" ?>
         <img id="Chic" src=<?php echo $img_src ?> alt="Soutien-gorge corbeille"/>
         <aside>
-            <h1><a href="product_3.php" style="text-decoration: none ; color: black"> <?php echo $data[0]?> </a></h1>
+            <h1><a href="product_3.php" style="text-decoration: none ; color: black"> <?php echo $data["name"]?> </a></h1>
             <div class="size">Taille:
                 <FORM>
                     <SELECT name="size" size="1">
@@ -56,9 +56,9 @@ $conn = null;
                     </SELECT>
                 </FORM>
             </div> 
-            <div class="price"> <?php echo $data[2]?>€ </div>
+            <div class="price"> <?php echo $data["unit_price"]?>€ </div>
             <div class="quantity"><input type="submit" id="submit" value="Ajouter au panier"> </div>
-            <p> <?php echo $data[1]?></p>
+            <p> <?php echo $data["description"]?></p>
         </aside>
     </div>
     <?php } ?>
