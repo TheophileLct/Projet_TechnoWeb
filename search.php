@@ -1,14 +1,3 @@
-<?php
-    try {
-        session_start ();
-        include "bdd.php";
-    }
-
-    catch(PDOException $e){
-        echo $sql . "<br>" . $e->getMessage();
-    }
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -20,10 +9,10 @@
 
 <body>
  	
-<div id="searchbar">
+<div id="searchbar" action="research.php" method="post">
     <form action="" class="formulaire">
-    <input class="champ" type="text" placeholder="Search..."/>
-    <input class="bouton" type="button" value="Search" />                
+    <input name="research"class="champ" type="text" placeholder="Search..."/>
+    <input type="submit" id="submit" value="Search">                
     </form>
 </div>
 

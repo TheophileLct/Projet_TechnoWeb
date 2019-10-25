@@ -19,9 +19,9 @@
         </div>
 
        <div id="searchbar">
-               <form action="" class="formulaire">
-               <input class="champ" type="text" placeholder="Search..."/>
-                    <input class="bouton" type="button" value="Search" />
+               <form action="research.php" class="formulaire" method="post">
+               <input name=research class="champ" type="text" placeholder="Search..."/>
+                    <input type="submit" id="submit" value="Search" />
                     
                 </form>
                 </div>
