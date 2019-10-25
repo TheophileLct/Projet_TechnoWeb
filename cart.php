@@ -45,7 +45,7 @@
             while ($data = $req1->fetch()) {
         ?>
             <section>
-            <?php $img_src = "img/Produit_".$data[3].".jpg" ?>
+            <?php $img_src = "img/Produit_".$data[4].".jpg" ?>
                 <img id="Monica" src=<?php echo $img_src ?> alt="Soutien-gorge avec armatures"/> 
                 <aside>
                 <h1><?php echo $data[0] ?></h1>

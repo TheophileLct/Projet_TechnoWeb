@@ -3,13 +3,13 @@
 
  $servername = "localhost";
  $username = "root";
- $password = "root";
+ $password = "";
  $dbname = "bddprojet";
 
  try {
     session_start ();
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
- $req1 = $conn->prepare('SELECT name, description, unit_price FROM products WHERE 1');
+ $req1 = $conn->prepare('SELECT name, description, unit_price, id FROM products WHERE 1');
  $req1->execute();
  }
 
@@ -41,7 +41,8 @@ $conn = null;
         ?>
 
     <div class="section">
-        <img id="Chic" src="img/Produit_3.jpg" alt="Soutien-gorge corbeille"/>
+        <?php $img_src = "img/Produit_".$data[3].".jpg" ?>
+        <img id="Chic" src=<?php echo $img_src ?> alt="Soutien-gorge corbeille"/>
         <aside>
             <h1><a href="product_3.php" style="text-decoration: none ; color: black"> <?php echo $data[0]?> </a></h1>
             <div class="size">Taille:
