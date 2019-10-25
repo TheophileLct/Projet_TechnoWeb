@@ -9,18 +9,11 @@
 
 <body>
  	
- <div id="searchbar">
-               
-               <h1>What would you like to search?</h1>
-               <form action="" class="formulaire">
-               <input class="champ" type="text" placeholder="Search..."/>
-                    <input class="bouton" type="button" value=" " />
-                    
-                </form>
+     <div class= recherche>
+        <p> FAITE VOTRE RECHERCHE DANS LA BARRE DE RECHERCHE</p>
                 </div>
 
-
-
 </body>
+
 <footer> <?php include 'footer.php'?></footer>
 </html>
