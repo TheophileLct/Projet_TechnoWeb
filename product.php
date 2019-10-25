@@ -3,7 +3,7 @@
 
  $servername = "localhost";
  $username = "root";
- $password = "";
+ $password = "root";
  $dbname = "bddprojet";
 
  try {
@@ -57,8 +57,10 @@ $conn = null;
                 </FORM>
             </div> 
             <div class="price"> <?php echo $data["unit_price"]?>€ </div>
+            <form action="cart_save.php?id=<?php echo $data['id']?>" method="post">
             <div class="quantity"><input type="submit" id="submit" value="Ajouter au panier"> </div>
             <p> <?php echo $data["description"]?></p>
+            </form>
         </aside>
     </div>
     <?php } ?>
