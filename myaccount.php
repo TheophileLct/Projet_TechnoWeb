@@ -20,21 +20,21 @@ if (empty($_SESSION['login'])) {
 
 <body>
   <center>
-    <form id="user_address" action="connected.php" method="post">
+    <form id="user_address" action="myaccount_updated.php" method="post">
       <h1><?php
           // Ici on est bien loggué, on affiche un message
           echo 'Bienvenue ', $_SESSION['login'];
           ?></h1>
       <fieldset id="inputs">
-        <input name="username1" id="username" type="text" placeholder="Adresse de livraison" autofocus required>
+        <input name="billing_adress" id="username" type="text" placeholder="Adresse de livraison" autofocus required>
         <h1></h1>
-        <input name="password1" id="password" type="password" placeholder="Complément d'adresse" autofocus required>
+        <input name="billing_address2" id="password" type="text" placeholder="Complément d'adresse" autofocus required>
         <h1></h1>
-        <input name="password1" id="password" type="password" placeholder="Code postal" autofocus required>
+        <input name="postal" id="password" type="text" placeholder="Code postal" autofocus required>
         <h1></h1>
-        <input name="password1" id="password" type="password" placeholder="Pays" autofocus required>
+        <input name="country" id="password" type="text" placeholder="Pays" autofocus required>
         <h1></h1>
-        <input name="password1" id="password" type="password" placeholder="Ville" autofocus required>
+        <input name="city" id="password" type="text" placeholder="Ville" autofocus required>
       </fieldset>
       <fieldset id="actions">
         <input type="submit" id="submit" value="Save">

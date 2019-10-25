@@ -25,9 +25,12 @@
                     </SELECT>
                 </FORM>
             </div> 
-        <div class="quantity">Quantité: <input class="number" type="number" value="1" min="0" max="99"> </div>
+            <form action="cart_save.php" method="post">
+        <div class="quantity"><input type="submit" id="submit" value="Ajouter au panier"> </div>
             <div class="price"> 59 € </div>
             <p>Moderne et féminin, voici l’iconique Soutien-gorge avec armatures, en dentelle 100% française. forme corbeille emboîtant. Dos cheminée et doublure renforcée. Confére un très bon maintien. Convient davantage aux potrines moyennes à généreuses. Disponible jusqu'au bonnet F.</p>
+            
+        </form>
         </aside>
     </div>
 
