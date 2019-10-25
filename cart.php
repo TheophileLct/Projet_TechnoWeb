@@ -12,8 +12,15 @@
         $req = $conn->prepare('SELECT id FROM users WHERE username = ?');
         $req->execute(Array($NOM));
         $donnees = $req->fetch();
-        $req1 = $conn->prepare('SELECT name, description, prod.unit_price, ord_prod.quantity FROM products prod, order_products ord_prod, orders ord WHERE (ord.type = "CART" AND ord_prod.order_id = ord.id AND prod.id = ord_prod.product_id AND ord.user_id = ?)');
+
+        $req1 = $conn->prepare('SELECT name, description, products.unit_price, order_products.quantity FROM products, order_products, orders WHERE (orders.type = "CART" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
         $req1->execute(Array($donnees[0]));
+
+        $req2 = $conn->prepare('SELECT SUM(products.unit_price*order_products.quantity) FROM products, order_products, orders WHERE (orders.type = "CART" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
+        $req2->execute(Array($donnees[0]));
+        $donnees2 = $req2->fetch();
+        echo $donnees2[0];
+
         $Name = [];
         $Description = [];
         $Price =  [];
@@ -24,7 +31,7 @@
                 array_push($Price, $donnees1[2]);
                 array_push($Quantity, $donnees1[3]);
             }
-            for($k=0;$k<sizeof($Name);$k++){
+            /*for($k=0;$k<sizeof($Name);$k++){
                 echo $Name[$k];
                 echo "  ";
                 echo $Description[$k];
@@ -33,7 +40,7 @@
                 echo "  ";
                 echo $Quantity[$k];
                 echo "  ";
-            }
+            }*/
         }
 
     catch(PDOException $e){
