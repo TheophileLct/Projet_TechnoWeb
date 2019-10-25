@@ -31,7 +31,7 @@ try {
         }
     }
     else{
-        echo 'Pseudo Inconnue';
+        echo 'Pseudo Inconnu';
     }
 }
 catch(PDOException $e)
