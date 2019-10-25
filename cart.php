@@ -48,8 +48,8 @@
             <?php $img_src = "img/Produit_".$data[4].".jpg" ?>
                 <img id="Monica" src=<?php echo $img_src ?> alt="Soutien-gorge avec armatures"/> 
                 <aside>
-                <h1><?php echo $data[0] ?></h1>
-                <p><?php echo $data[1] ?></p>
+                <h1><?php echo $data["name"] ?></h1>
+                <p><?php echo $data["description"] ?></p>
                 <div class="size">Size:
                         <FORM>
                             <SELECT name="size" size="1">
@@ -62,8 +62,8 @@
                             </SELECT>
                         </FORM>
                     </div> 
-                <div class="quantity">Quantity: <input class="number" type="number" value=<?php echo $data[3] ?> min="0" max="99"> </div>
-                <div class="price"> <?php echo $data[2]?>€ </div>
+                <div class="quantity">Quantity: <input class="number" type="number" value=<?php echo $data["quantity"] ?> min="0" max="99"> </div>
+                <div class="price"> <?php echo $data["unit_price"]?>€ </div>
                 </aside>
             </section>
             <?php } ?>
