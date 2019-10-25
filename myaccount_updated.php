@@ -12,8 +12,6 @@ $code_postal = $_POST["postal"];
 $pays = $_POST["country"];
 $ville = $_POST["city"];
 
-echo 'ur account has been updated';
-
 
 
 try {
@@ -25,9 +23,35 @@ try {
     $donnees = $req->fetch();
     $req1 = $conn->prepare('UPDATE user_addresses SET address_one="' . $billing_address . '",address_two="' . $billing_address2 . '",postal_code="' . $code_postal . '",city="' . $ville . '",country="' . $pays . '",updated_at=NOW() WHERE id=?');
     $req1->execute(array($donnees[0]));
-    echo "New record created successfully";
 } catch (PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
 }
 
 $conn = null;
+
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/confirmation_creation_compte.css" />
+    <?php include 'header.php' ?>
+    <title>Diabolo</title>
+</head>
+
+<body>
+    </br>
+    </br>
+    </br>
+    <h1>Your account has succesfuly been updated</h1>
+    </br>
+</body>
+
+<footer>
+    <?php include 'footer.php' ?>
+</footer>
+
+</html>
