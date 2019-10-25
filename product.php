@@ -44,7 +44,8 @@ $conn = null;
         <?php $img_src = "img/Produit_".$data["id"].".jpg" ?>
         <img id="Chic" src=<?php echo $img_src ?> alt="Soutien-gorge corbeille"/>
         <aside>
-            <h1><a href="product_3.php" style="text-decoration: none ; color: black"> <?php echo $data["name"]?> </a></h1>
+            <?php $href = "product_".$data["id"].".php" ?>
+            <h1><a href=<?php echo $href ?> style="text-decoration: none ; color: black"> <?php echo $data["name"]?> </a></h1>
             <div class="size">Taille:
                 <FORM>
                     <SELECT name="size" size="1">
