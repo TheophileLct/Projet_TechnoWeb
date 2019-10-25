@@ -13,7 +13,7 @@
     <div class="section">
         <img id="Monica" src="img/Produit_1.jpg" alt="Soutien-gorge avec armatures0"/> 
         <aside>
-            <h1>Monica - Soutien-gorge avec armatures </h1>
+            <h1><a href="product_1.php" style="text-decoration: none ; color: black"> Monica - Soutien-gorge avec armatures </a></h1>
             <div class="size">Taille:
                 <FORM>
                     <SELECT name="size" size="1">
@@ -37,7 +37,7 @@
     <div class="section">
         <img id="Josephine" src="img/Produit_2.jpg" alt="Soutien-gorge avec armatures"/>
         <aside>
-            <h1>Josephine - Soutien-gorge avec armatures </h1>
+            <h1><a href="product_2.php" style="text-decoration: none ; color: black"> Joséphine - Soutien-gorge avec armatures </a></h1>
             <div class="size">Taille:
                 <FORM>
                     <SELECT name="size" size="1">
@@ -59,7 +59,7 @@
     <div class="section">
         <img id="Chic" src="img/Produit_3.jpg" alt="Soutien-gorge corbeille"/>
         <aside>
-            <h1>Chic - Soutien-gorge corbeille</h1>
+            <h1><a href="product_3.php" style="text-decoration: none ; color: black"> Chic - Soutien-gorge corbeille </a></h1>
             <div class="size">Taille:
                 <FORM>
                     <SELECT name="size" size="1">
