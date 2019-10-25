@@ -2,7 +2,8 @@
 <html>
     <head>
     <link rel="icon" type="image/png" href="img/Logo_Diabolo_2.png" />
-        <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <title>Diabolo</title>
     </head>
 
 
@@ -25,27 +26,30 @@
                 </form>
                 </div>
 
-        <div class='panier'>
-        <a href="cart.php" style="text-decoration: none ; color: black"> Panier</a>
-    
+            <div class="connexion">
+                <div>
+                <label for="username">Pseudo :</label>
+                <input type="text" id="username" name="username">
             </div>
 
-        <div class='compte'>
-            <a href="account.php" style="text-decoration: none; color: black"> Login/Sign In </a>
+            <div>
+                <label for="pass">Mot de passe :</label>
+                <input type="password" id="pass" name="password"
+                    minlength="8" required>
+            </div>
+        
 
-        </div> 
+        <input type="submit" value="Sign in">
+        </div>
 
-        <div class='moncompte'>
-            <a href="myaccount.php" style="text-decoration: none; color: black"> Mon Compte </a>
-
-        </div> 
 
         </div>
         
         <div class='produit'>
             <a href="product.php" style="text-decoration: none ; color: white" class=test > Produit </a>
-            <a class="test" >Nos Modèles  </a>
-            <a class=test >  Galerie  </a>
+            <a href="myaccount.php" style="text-decoration: none; color: white" class=test> Mon Compte </a>
+            <a href="account.php" style="text-decoration: none; color: white" classe=test> Login/Sign In </a>
+            <a href="cart.php" style="text-decoration: none ; color: white" class=test> Panier</a>
             </div> 
 
        

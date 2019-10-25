@@ -5,7 +5,7 @@
 <head>
     <link rel="stylesheet" href="css/account.css" />
     <?php include 'header.php'?>
-    
+    <title>Diabolo</title>
 </head>
 
 <body>

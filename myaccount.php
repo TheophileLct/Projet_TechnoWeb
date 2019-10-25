@@ -14,7 +14,7 @@ if (empty($_SESSION['login'])) {
 
 <head>
   <link rel="stylesheet" href="css/myaccount.css" />
-  <title>Mon compte</title>
+  <title>Diabolo : Mon compte</title>
   <?php include 'header.php' ?>
 </head>
 
