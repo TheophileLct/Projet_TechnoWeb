@@ -1,14 +1,9 @@
 
 <?php 
 
- $servername = "localhost";
- $username = "root";
- $password = "";
- $dbname = "bddprojet";
-
  try {
     session_start ();
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    include "bdd.php";
  $req1 = $conn->prepare('SELECT name, description, unit_price, id FROM products WHERE 1');
  $req1->execute();
  }
