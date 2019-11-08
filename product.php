@@ -21,7 +21,6 @@ $conn = null;
 <head>
     <title>Diabolo</title>
     <link rel="stylesheet" href="css/product.css" />
-    <?php include 'header.php' ?>
 </head>
 
 <body>

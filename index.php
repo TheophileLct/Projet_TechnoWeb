@@ -10,7 +10,6 @@
 
 <?php
 
-session_start()
 
 if (!empty($_GET)&&!empty($_GET['page'])){
 	if ($_GET['page'] === 'product'){
