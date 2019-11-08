@@ -88,8 +88,10 @@ $conn = null;
       </fieldset>
     </form>
 
-    <form id="logout" action="index.php?page=logout">
-      <input type="submit" id="submit" value="Log out">
+    <form id="inputs2" action="index.php?page=logout">
+      <fieldset id="actions">
+        <input type="submit" id="submit" value="Log out">
+      </fieldset>
     </form>
   </center>
 </body>

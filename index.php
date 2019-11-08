@@ -28,12 +28,10 @@ if (!empty($_GET)&&!empty($_GET['page'])){
 		include('connected.php');
 	}elseif($_GET['page']==='contact'){
 		include('contact.php');
-	}elseif($_GET['page']==='logout'){
-		include('logout.php');
 	}elseif($_GET['page']==='myaccount'){
 		include('myaccount.php');
 	}elseif($_GET['page']==='myaccount_updated'){
-		include('logout.php');
+		include('myaccount_updated.php');
 	}elseif($_GET['page']==='research'){
 		include('research.php');
 	}elseif($_GET['page']==='researchpage'){
@@ -46,6 +44,8 @@ if (!empty($_GET)&&!empty($_GET['page'])){
 		include('product_2.php');
 	}elseif($_GET['page']==='product_3'){
 		include('product_3.php');
+	}elseif($_GET['page']==='logout'){
+		include('logout.php');
 	}
 
 }else {
