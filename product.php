@@ -58,10 +58,12 @@ $conn = null;
         </div>
     <?php } ?>
 
-    <footer>
+   
+</body>
+
+ <footer>
         <?php include 'footer.php' ?>
     </footer>
-</body>
 
 
 </html>
