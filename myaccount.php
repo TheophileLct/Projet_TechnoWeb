@@ -1,11 +1,39 @@
 <?php
-
 session_start();
 
 if (empty($_SESSION['login'])) {
   header('Location: account.php');
   exit();
 }
+try {
+  include "bdd.php";
+
+  $NOM = $_SESSION['login'];
+
+  $req1 = $conn->prepare('SELECT address_one FROM user_addresses WHERE human_name = ?');
+  $req1->execute(array($NOM));
+  $donnees1 = $req1->fetch();
+
+  $req2 = $conn->prepare('SELECT address_two FROM user_addresses WHERE human_name = ?');
+  $req2->execute(array($NOM));
+  $donnees2 = $req2->fetch();
+
+  $req3 = $conn->prepare('SELECT postal_code FROM user_addresses WHERE human_name = ?');
+  $req3->execute(array($NOM));
+  $donnees3 = $req3->fetch();
+
+  $req4 = $conn->prepare('SELECT city FROM user_addresses WHERE human_name = ?');
+  $req4->execute(array($NOM));
+  $donnees4 = $req4->fetch();
+
+  $req5 = $conn->prepare('SELECT country FROM user_addresses WHERE human_name = ?');
+  $req5->execute(array($NOM));
+  $donnees5 = $req5->fetch();
+} catch (PDOException $e) {
+  echo $sql . "<br>" . $e->getMessage();
+}
+$conn = null;
+
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +45,28 @@ if (empty($_SESSION['login'])) {
 </head>
 
 <body>
+  <center>
+    <form id="user_address">
+      <h2><?php
+          echo 'Welcome ', $_SESSION['login'];
+          ?></h2>
+      <fieldset id="informations">
+        <h1>Delivery address :<?php
+                              echo $donnees1[0], " ", $donnees2[0];
+                              ?></h1>
+        <h1>Postcode :<?php
+                      echo $donnees3[0];
+                      ?></h1>
+        <h1>City :<?php
+                  echo $donnees4[0];
+                  ?></h1>
+        <h1>Country :<?php
+                      echo $donnees5[0];
+                      ?></h1>
+
+      </fieldset>
+    </form>
+  </center>
   <center>
     <form id="user_address" action="index.php?page=myaccount_updated" method="post">
       <h1><?php
