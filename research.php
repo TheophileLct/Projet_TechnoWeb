@@ -6,9 +6,6 @@ try {
         $req = $conn->prepare("SELECT id FROM products WHERE name LIKE '%$research%' ");
         $req->execute();
         $data = $req->fetch();
-        echo $data['id'];
-        echo $research;
-
     }
 
     catch(PDOException $e){
