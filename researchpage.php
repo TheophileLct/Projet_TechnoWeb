@@ -2,23 +2,23 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="css/search.css" />
-    
+    <link rel="stylesheet" href="css/researchpage.css" />
     <title>Diabolo</title>
 </head>
 
 <body>
-
-        <div id="searchbar">
-               <form action="index.php?page=research" class="formulaire" method="post">
+        </br>
+        </br>
+   	  <h3>What are you looking for ? </h3>
+	
+        <div id="searchbar2">
+               <form action="research.php" class="formulaire" method="post">
                <input name=research class="champ" type="text" placeholder="Search..."/>
                     <input type="submit" id="submit" value="Search" />
-                    
                 </form>
         </div>
-
+        </br>
+        </br>
  </body>
 
-<footer> 
-</footer>
 </html>
