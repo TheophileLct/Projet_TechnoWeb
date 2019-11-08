@@ -1,6 +1,5 @@
 <?php
 
-
     try {
         session_start ();
         include "bdd.php";
@@ -8,6 +7,23 @@
         $req = $conn->prepare('SELECT id FROM users WHERE username = ?');
         $req->execute(Array($NOM));
         $donnees = $req->fetch();
+
+        if(isset($_POST['id'])){
+            $id=$_POST['id'];
+
+            if(isset($_POST['quantity'])){
+                $quantity=$_POST['quantity'];
+                
+                try {
+                    include "bdd.php";
+                    $req4 = $conn->prepare('UPDATE order_products SET quantity = '.$quantity.' WHERE product_id = '.$id);
+                    $req4->execute();
+                }
+                catch(PDOException $e){
+                    echo $sql . "<br>" . $e->getMessage();
+                }
+            }
+        }
 
         $req1 = $conn->prepare('SELECT name, description, products.unit_price, order_products.quantity, products.id FROM products, order_products, orders WHERE (orders.type = "CART" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
         $req1->execute(Array($donnees[0]));
@@ -45,7 +61,7 @@
             while ($data = $req1->fetch()) {
         ?>
             <section>
-            <?php $img_src = "img/Produit_".$data[4].".jpg" ?>
+            <?php $img_src = "img/Produit_".$data["id"].".jpg" ?>
                 <img id="Monica" src=<?php echo $img_src ?> alt="Soutien-gorge avec armatures"/> 
                 <aside>
                 <h1><?php echo $data["name"] ?></h1>
@@ -61,8 +77,12 @@
                                 <OPTION>A
                             </SELECT>
                         </FORM>
-                    </div> 
-                <div class="quantity">Quantity: <input class="number" type="number" value=<?php echo $data["quantity"] ?> min="0" max="99"> </div>
+                    </div>
+                <form action='' method='post'>
+                    <div class="quantity">Quantity: <input class="number" type="number" name="quantity" value=<?php echo $data["quantity"] ?> min="0" max="99"> </div>
+                    <input type="hidden" name="id" value=<?php echo $data["id"] ?>>
+                    <input class="bouton_1" type="submit" value="Valider"/>
+                </form>
                 <div class="price"> <?php echo $data["unit_price"]?>€ </div>
                 </aside>
             </section>
@@ -79,4 +99,5 @@
         <?php include 'footer.php'?>
         </footer>
     </body>
+
 </html>
