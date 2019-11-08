@@ -1,5 +1,5 @@
 <?php
-
+/*
 if (){
 	header ('location: about.php');
 }
@@ -62,6 +62,6 @@ if (){
 
 if (){
 	header ('location: search.php');
-}
+}*/
 
 ?>
