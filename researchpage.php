@@ -9,8 +9,7 @@
 <body>
         </br>
         </br>
-   	  <h3>What are you looking for ? </h3>
-	
+   	
         <div id="searchbar2">
                <form action="research.php" class="formulaire" method="post">
                <input name=research class="champ" type="text" placeholder="Search..."/>
