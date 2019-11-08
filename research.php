@@ -18,14 +18,10 @@ try {
 <head>
     <title>Diabolo</title>
     <link rel="stylesheet" href="css/product.css" />
+    <?php include 'header.php'?>
 </head>
 
 <body>
-   
-    <header>
-    <?php include 'header.php'?>
-    </header>
-
     <div class="section">
         <?php $img_src = "img/Produit_".$data["id"].".jpg" ?>
         <img id="Chic" src=<?php echo $img_src ?> alt="Soutien-gorge corbeille"/>
@@ -49,11 +45,8 @@ try {
             </form>
         </aside>
     </div>
-
-    <footer>
-    <?php include 'footer.php'?>
-    </footer>
 </body>
-
-
+<footer>
+    <?php include 'footer.php'?>
+</footer>
 </html>
