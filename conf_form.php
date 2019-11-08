@@ -28,7 +28,6 @@ $conn = null;
 
 <head>
     <link rel="stylesheet" href="css/confirmation_creation_compte.css" />
-    <?php include 'header.php' ?>
     <title>Diabolo</title>
 </head>
 
@@ -36,12 +35,12 @@ $conn = null;
     </br>
     </br>
     </br>
-    <h1>Votre compte a été créé avec succès.</h1>
+    <h1>Your account has been successfully updated</h1>
     </br>
 </body>
 
 <footer>
-    <?php include 'footer.php' ?>
+
 </footer>
 
 </html>

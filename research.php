@@ -23,7 +23,7 @@ try {
 <body>
    
     <header>
-    <?php include 'header.php'?>
+    
     </header>
 
     <div class="section">
@@ -51,7 +51,7 @@ try {
     </div>
 
     <footer>
-    <?php include 'footer.php'?>
+    
     </footer>
 </body>
 
