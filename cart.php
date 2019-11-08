@@ -89,21 +89,11 @@ $conn = null;
             <?php } ?>
 
         <section>
-            <h1>Votre Commande:</h1>
-            <h2><p>Vous avez <?php echo $Quantity[0]; ?> produits pour un total de:</p></h2>
+            <h1>Your order</h1>
+            <h2><p>You have <?php echo $Quantity[0]; ?> products for a total of:</p></h2>
             <div class="price_final"> <?php echo $Price_Total[0]; ?>€ </div>
             <input class="bouton_1" type="button" value="Valider" />
         </section>
-    <?php } ?>
-
-    <section>
-        <h1>Your order</h1>
-        <h2>
-            <p>You have <?php echo $Quantity[0]; ?> products for a total of :</p>
-        </h2>
-        <div class="price_final"> <?php echo $Price_Total[0]; ?>€ </div>
-        <input class="bouton_1" type="button" value="Confirm" />
-    </section>
 
     <footer>
         
