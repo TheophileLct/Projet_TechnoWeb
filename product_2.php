@@ -8,7 +8,7 @@
 
 <body>
     <header>
-        <?php include 'header.php' ?>
+        
     </header>
 
     <div class="section">
@@ -33,7 +33,7 @@
         </aside>
     </div>
     <footer>
-        <?php include 'footer.php' ?>
+        
     </footer>
 </body>
 

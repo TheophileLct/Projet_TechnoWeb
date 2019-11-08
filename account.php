@@ -3,13 +3,12 @@
 
 <head>
     <link rel="stylesheet" href="css/account.css" />
-    <?php include 'header.php' ?>
     <title>Diabolo</title>
 </head>
 
 <body>
     <center>
-        <form id="login" action="connected.php" method="post">
+        <form id="login" action="index.php?page=connected" method="post">
             <h1>Log In</h1>
             <fieldset id="inputs">
                 <input name="username1" id="username" type="text" placeholder="Username" autofocus required>
@@ -23,7 +22,7 @@
     </center>
 
     <center>
-        <form id="create" action="conf_form.php" method="post">
+        <form id="create" action="index.php?page=conf_form" method="post">
             <h2>Create</h2>
             <fieldset id="inputs">
                 <input name="username" id="username" type="text" placeholder="Username" autofocus required>
@@ -42,7 +41,7 @@
 </body>
 
 <footer>
-    <?php include 'footer.php' ?>
+    
 </footer>
 
 </html>

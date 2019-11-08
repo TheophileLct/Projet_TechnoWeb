@@ -14,13 +14,13 @@
 
 
         <div class='logo'>
-            <a target="_blank" href="product.php">
+            <a target="_blank" href="index.php?page=product">
                 <img src="img/Logo_Diabolo_2.png" alt="logo" class=logo>
             </a>
         </div>
 
         <div id="searchbar">
-            <form action="research.php" class="formulaire" method="post">
+            <form action="index.php?page=research" class="formulaire" method="post">
                 <input name=research class="champ" type="text" placeholder="Search..." />
                 <input type="submit" id="submit" value="Search" />
 
@@ -28,7 +28,7 @@
         </div>
 
         <div class=connexion>
-            <form id="login1" action="connected.php" method="post">
+            <form id="login1" action="index.php?page=connected" method="post">
                 <fieldset id="inputs">
                     <input name="username1" id="username" type="text" placeholder="Username" autofocus required>
                     <h1></h1>
@@ -43,10 +43,17 @@
     </div>
 
     <div class='produit'>
-        <a href="product.php" style="text-decoration: none ; color: white" class=test> Products </a>
-        <a href="myaccount.php" style="text-decoration: none; color: white" class=test> My account </a>
-        <a href="account.php" style="text-decoration: none; color: white" classe=test> Login/Sign In </a>
-        <a href="cart.php" style="text-decoration: none ; color: white" class=test> Cart</a>
+        <a href="index.php?page=product" style="text-decoration: none ; color: white" class=test> Products </a>
+        <?php
+
+        session_start();
+
+        if ($_SESSION['login']) {
+                echo ('<a href="index.php?page=myaccount" style="text-decoration: none; color: white" class=test> My account </a>');
+                }
+        ?>
+        <a href="index.php?page=account" style="text-decoration: none; color: white" classe=test> Login/Sign In </a>
+        <a href="index.php?page=cart" style="text-decoration: none ; color: white" class=test> Cart</a>
     </div>
 
 

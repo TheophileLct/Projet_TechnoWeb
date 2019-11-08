@@ -25,10 +25,6 @@ $conn = null;
 
 <body>
 
-    <header>
-        <?php include 'header.php' ?>
-    </header>
-
     <?php
     while ($data = $req1->fetch()) {
         ?>
@@ -51,7 +47,7 @@ $conn = null;
                     </FORM>
                 </div>
                 <div class="price"> <?php echo $data["unit_price"] ?>€ </div>
-                <form action="cart_save.php?id=<?php echo $data['id'] ?>" method="post">
+                <form action="index.php?page=cart_save&id=<?php echo $data['id'] ?>" method="post">
                     <div class="quantity"><input type="submit" id="submit" value="Add to cart"> </div>
                     <p> <?php echo $data["description"] ?></p>
                 </form>
@@ -59,9 +55,6 @@ $conn = null;
         </div>
     <?php } ?>
 
-    <footer>
-        <?php include 'footer.php' ?>
-    </footer>
 </body>
 
 

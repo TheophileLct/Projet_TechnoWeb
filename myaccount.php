@@ -14,12 +14,11 @@ if (empty($_SESSION['login'])) {
 <head>
   <link rel="stylesheet" href="css/myaccount.css" />
   <title>Diabolo : My account</title>
-  <?php include 'header.php' ?>
 </head>
 
 <body>
   <center>
-    <form id="user_address" action="myaccount_updated.php" method="post">
+    <form id="user_address" action="index.php?page=myaccount_updated" method="post">
       <h1><?php
           echo 'Welcome ', $_SESSION['login'];
           ?></h1>
@@ -39,13 +38,13 @@ if (empty($_SESSION['login'])) {
       </fieldset>
     </form>
 
-    <form id="logout" action="logout.php">
+    <form id="logout" action="index.php?page=logout">
       <input type="submit" id="submit" value="Log out">
     </form>
   </center>
 </body>
 <footer>
-  <?php include 'footer.php' ?>
+
 </footer>
 
 </html>

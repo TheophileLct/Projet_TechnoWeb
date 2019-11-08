@@ -28,7 +28,6 @@ $conn = null;
 
 <head>
     <link rel="stylesheet" href="css/confirmation_creation_compte.css" />
-    <?php include 'header.php' ?>
     <title>Diabolo</title>
 </head>
 
@@ -41,7 +40,7 @@ $conn = null;
 </body>
 
 <footer>
-    <?php include 'footer.php' ?>
+
 </footer>
 
 </html>

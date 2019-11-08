@@ -27,7 +27,7 @@ try {
 
             $_SESSION['id']= $donnees2['id'];
 
-            header ('location: product.php');
+            header ('location: index.php');
         }
         else{
             echo 'Mot de passe FAUX';

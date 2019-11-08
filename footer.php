@@ -9,9 +9,9 @@
 <body>
     <div class="pied">
         </br>
-        <h4><a href="about.php" style="text-decoration: none ; color: pink">About us</h4>
-        <h4><a href="contact.php" style="text-decoration: none; color: pink">Contact us</h4>
-        <h4><a href="researchpage.php" style="text-decoration: none ; color: pink">Research</a> </h4>
+        <h4><a href="index.php?page=about" style="text-decoration: none ; color: pink">About us</h4>
+        <h4><a href="index.php?page=contact" style="text-decoration: none; color: pink">Contact us</h4>
+        <h4><a href="index.php?page=researchpage" style="text-decoration: none ; color: pink">Research</a> </h4>
     </div>
 
 </body>

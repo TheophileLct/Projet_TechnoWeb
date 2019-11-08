@@ -38,7 +38,7 @@ $conn = null;
 <body>
 
     <header>
-        <?php include 'header.php' ?>
+    
     </header>
 
     <?php
@@ -78,7 +78,7 @@ $conn = null;
     </section>
 
     <footer>
-        <?php include 'footer.php' ?>
+        
     </footer>
 </body>
 
