@@ -36,7 +36,7 @@ $conn = null;
     </br>
     </br>
     </br>
-    <h1>Votre compte a été créé avec succès.</h1>
+    <h1>Your account has been successfully updated</h1>
     </br>
 </body>
 
