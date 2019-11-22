@@ -46,57 +46,54 @@ $conn = null;
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/cart.css" />
     <title>Diabolo</title>
+    <link rel="stylesheet" href="css/cart.css" />
 </head>
 
 <body>
 
-    <header>
-    
-    </header>
-
     <?php
     while ($data = $req1->fetch()) {
         ?>
-            <section>
-            <?php $img_src = "img/Produit_".$data["id"].".jpg" ?>
-                <img id="Monica" src=<?php echo $img_src ?> alt="Soutien-gorge avec armatures"/> 
-                <aside>
-                <h1><?php echo $data["name"] ?></h1>
-                <p><?php echo $data["description"] ?></p>
+
+        <div class="section">
+            <?php $img_src = "img/Produit_" . $data["id"] . ".jpg" ?>
+            <img id="Chic" src=<?php echo $img_src ?> alt="Soutien-gorge corbeille" />
+            <aside>
+                <?php $href = "product_" . $data["id"] . ".php" ?>
+                <?php $dest = "index.php?page=product_".$data["id"] ?>
+                <h1><a href=<?php echo $dest?> style="text-decoration: none ; color: black"> <?php echo $data["name"] ?> </a></h1>
                 <div class="size">Size:
-                        <FORM>
-                            <SELECT name="size" size="1">
-                                <OPTION>F
-                                <OPTION>E
-                                <OPTION>D
-                                <OPTION selected>C
-                                <OPTION>B
-                                <OPTION>A
-                            </SELECT>
-                        </FORM>
-                    </div>
+                    <FORM>
+                        <SELECT name="size" size="1">
+                            <OPTION>90B
+                            <OPTION>90C
+                            <OPTION>90D
+                            <OPTION selected>90E
+                            <OPTION>90F
+                        </SELECT>
+                    </FORM>
+                </div>
+                <div class="price"> <?php echo $data["unit_price"]?>€ </div>
                 <form action='' method='post'>
                     <div class="quantity">Quantity: <input class="number" type="number" name="quantity" value=<?php echo $data["quantity"] ?> min="0" max="99"> </div>
                     <input type="hidden" name="id" value=<?php echo $data["id"] ?>>
                     <input class="bouton_1" type="submit" value="Valider"/>
+                    <p><?php echo $data["description"] ?></p>
                 </form>
-                <div class="price"> <?php echo $data["unit_price"]?>€ </div>
-                </aside>
-            </section>
-            <?php } ?>
+            </aside>
+        </div>
+    <?php } ?>
 
-        <section>
-            <h1>Your order</h1>
+    <div class="section">
+        <h1>Your order</h1>
+        <aside>
             <h2><p>You have <?php echo $Quantity[0]; ?> products for a total of:</p></h2>
-            <div class="price_final"> <?php echo $Price_Total[0]; ?>€ </div>
-            <input class="bouton_1" type="button" value="Valider" />
-        </section>
+            <h3><div class="price_final"> <?php echo $Price_Total[0]; ?>€ </div></h3>
+            <h3><input class="bouton_1" type="button" value="Valider" /></h3>
+        </aside>
+    </div>
 
-    <footer>
-        
-    </footer>
 </body>
 
 </html>
