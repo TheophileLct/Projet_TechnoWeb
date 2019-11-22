@@ -9,7 +9,6 @@
 </html>
 
 <?php
-session_start();
 include "bdd.php";
 
 if (!empty($_GET)&&!empty($_GET['page'])){

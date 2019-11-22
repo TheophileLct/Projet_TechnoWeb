@@ -24,7 +24,7 @@ try {
 
         if ($donnees1) 
         {
-            header ('location: cart.php');
+            header ('location: index.php');
 
         }
         else{
@@ -34,7 +34,7 @@ try {
             $sql = "INSERT INTO order_products (order_id,product_id,quantity)
             VALUES ('$orderid','$idstg', '1')";
             $conn->exec($sql);
-            header ('location: cart.php');
+            
 
         }
 
@@ -51,7 +51,7 @@ try {
         $sql1 = "INSERT INTO order_products (order_id,product_id,quantity)
             VALUES ('$orderid2','$idstg', '1')";
         $conn->exec($sql1);
-        header ('location: cart.php');
+        
 
 
 
