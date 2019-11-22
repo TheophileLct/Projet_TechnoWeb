@@ -1,6 +1,4 @@
-
 <?php
-
 
 $userid = $_SESSION['id'];
 $idstg = $_GET['id'];
@@ -8,7 +6,7 @@ echo $idstg;
 echo $userid;
 
 try {
-    
+    include "bdd.php";
     $req = $conn->prepare('SELECT id FROM orders WHERE user_id = :user_id');
     $req->execute(array(':user_id'=>$userid));
     $donnees = $req->fetch();
@@ -24,7 +22,7 @@ try {
 
         if ($donnees1) 
         {
-            header ('location: index.php');
+            header ('location: cart.php');
 
         }
         else{
@@ -34,7 +32,7 @@ try {
             $sql = "INSERT INTO order_products (order_id,product_id,quantity)
             VALUES ('$orderid','$idstg', '1')";
             $conn->exec($sql);
-            
+            header ('location: cart.php');
 
         }
 
@@ -51,7 +49,7 @@ try {
         $sql1 = "INSERT INTO order_products (order_id,product_id,quantity)
             VALUES ('$orderid2','$idstg', '1')";
         $conn->exec($sql1);
-        
+        header ('location: cart.php');
 
 
 
