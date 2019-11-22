@@ -43,26 +43,6 @@ $conn = null;
                     </FORM>
                 </div>
                 <div class="price"> <?php echo $data["unit_price"] ?>€ </div>
-
-
-                <!-- <form action="index.php?page=cart_save&id=<?php echo $data['id'] ?>" method="post"> -->
-                <?php
-                //Supprimer les messages
-                $suppressionMessage = is_int($_GET['idMsg']) ? $_GET['idMsg'] : false;
-                if(suppressionMessage){
-                    mysql_query('DELETE FROM livreor WHERE id=' . $suppressionMessage);
-                }
-                $reponse = mysql_query("SELECT id, pseudo, message FROM livreor");
- 
- 
-                while ($donnees = mysql_fetch_array($reponse))
-                {
-                    echo '<div id="liste"><strong><font color="dodgerblue"><a href="livre_or_a.php?idMsg=' . $donnees['id'] . '"><img src="../images/supprimer.png" /></a> ' . $donnees['pseudo'] . '</font></strong> a écrit :</div><div id="liste_a_puce">' . $donnees['message'] . '</div><br>';
-                }
-                ?>
-
-
-
                     <div class="quantity"><input type="submit" id="submit" value="Add to cart"> </div>
                     <p> <?php echo $data["description"] ?></p>
                 </form>
