@@ -16,7 +16,11 @@
                 
                 try {
                     include "bdd.php";
-                    $req4 = $conn->prepare('UPDATE order_products SET quantity = '.$quantity.' WHERE product_id = '.$id);
+                    if($quantity == 0){
+                        $req4 = $conn->prepare('DELETE FROM order_products WHERE product_id = '.$id);
+                    }else{
+                        $req4 = $conn->prepare('UPDATE order_products SET quantity = '.$quantity.' WHERE product_id = '.$id);
+                    }                    
                     $req4->execute();
                 }
                 catch(PDOException $e){
