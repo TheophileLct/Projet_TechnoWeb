@@ -3,6 +3,13 @@
     try {
     
         $NOM = $_SESSION['login'];
+        $userid = $_SESSION['id'];
+
+        $req5 = $conn->prepare('SELECT id FROM orders WHERE user_id = :user_id');
+        $req5->execute(array(':user_id'=>$userid));
+        $donnees = $req5->fetch();
+        $orderid = $donnees["id"];
+
         $req = $conn->prepare('SELECT id FROM users WHERE username = ?');
         $req->execute(Array($NOM));
         $donnees = $req->fetch();
@@ -15,11 +22,11 @@
                 echo $quantity;
                 
                 try {
-                    include "bdd.php";
                     if($quantity == 0){
-                        $req4 = $conn->prepare('DELETE FROM order_products WHERE order_products.product_id = '.$id_produit.'');
+                        echo ("ok");
+                        $req4 = $conn->prepare('DELETE FROM order_products WHERE (product_id = '.$id_produit.' AND order_id = '.$orderid.')');
                     }else{
-                        $req4 = $conn->prepare('UPDATE order_products SET quantity = '.$quantity.' WHERE product_id = '.$id_produit.'');
+                        $req4 = $conn->prepare('UPDATE order_products SET quantity = '.$quantity.' WHERE (product_id = '.$id_produit.' AND order_id = '.$orderid.')');
                     }                    
                     $req4->execute();
                 }
