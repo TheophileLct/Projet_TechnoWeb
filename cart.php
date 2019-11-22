@@ -8,17 +8,18 @@
         $donnees = $req->fetch();
 
         if(isset($_POST['id_produit'])){
-            $id=$_POST['id_produit'];
+            $id_produit=$_POST['id_produit'];
 
             if(isset($_POST['quantity'])){
                 $quantity=$_POST['quantity'];
+                echo $quantity;
                 
                 try {
                     include "bdd.php";
                     if($quantity == 0){
-                        $req4 = $conn->prepare('DELETE FROM order_products, orders WHERE (order_products.product_id = '.$id_produit.' AND order_products.order_id = orders.id AND orders.user_id = ?)');
+                        $req4 = $conn->prepare('DELETE FROM order_products WHERE order_products.product_id = '.$id_produit.'');
                     }else{
-                        $req4 = $conn->prepare('UPDATE order_products FROM order_products, orders SET quantity = '.$quantity.' WHERE product_id = '.$id_produit.' AND order_products.order_id = orders.id AND orders.user_id = ?)');
+                        $req4 = $conn->prepare('UPDATE order_products SET quantity = '.$quantity.' WHERE product_id = '.$id_produit.'');
                     }                    
                     $req4->execute();
                 }
