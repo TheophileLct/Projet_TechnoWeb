@@ -5,7 +5,6 @@ $password1 = $_POST["password1"];
 
 
 try {
-    include "bdd.php";
     $req = $conn->prepare('SELECT username FROM users WHERE username = :username');
     $req->execute(array(':username'=>$username1));
     $donnees = $req->fetch();

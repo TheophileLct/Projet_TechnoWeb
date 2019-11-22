@@ -1,7 +1,6 @@
 
 <?php
 
-session_start();
 
 $userid = $_SESSION['id'];
 $idstg = $_GET['id'];
@@ -9,7 +8,7 @@ echo $idstg;
 echo $userid;
 
 try {
-    include "bdd.php";
+    
     $req = $conn->prepare('SELECT id FROM orders WHERE user_id = :user_id');
     $req->execute(array(':user_id'=>$userid));
     $donnees = $req->fetch();

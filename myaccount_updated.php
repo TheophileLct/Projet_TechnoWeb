@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 if (empty($_SESSION['login'])) {
     header('Location: account.php');
@@ -15,7 +14,6 @@ $ville = $_POST["city"];
 
 
 try {
-    include "bdd.php";
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $NOM = $_SESSION['login'];
     $req = $conn->prepare('SELECT id FROM user_addresses WHERE human_name ="' . $NOM . '"');

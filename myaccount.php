@@ -1,12 +1,10 @@
 <?php
-session_start();
 
 if (empty($_SESSION['login'])) {
   header('Location: account.php');
   exit();
 }
 try {
-  include "bdd.php";
 
   $NOM = $_SESSION['login'];
 
@@ -88,7 +86,7 @@ $conn = null;
       </fieldset>
     </form>
 
-    <form id="inputs2" action="index.php?page=logout">
+    <form id="inputs2" action="index.php?page=logout" method="post">
       <fieldset id="actions">
         <input type="submit" id="submit" value="Log out">
       </fieldset>

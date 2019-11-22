@@ -1,8 +1,6 @@
 <?php
 
 try {
-    session_start();
-    include "bdd.php";
     $req1 = $conn->prepare('SELECT name, description, unit_price, id FROM products WHERE 1');
     $req1->execute();
 } catch (PDOException $e) {
