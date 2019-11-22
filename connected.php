@@ -16,7 +16,6 @@ try {
 
     if ($donnees1["password"]==$password1) 
         {
-            session_start ();
 
             $_SESSION['login'] = $_POST["username1"];
             $_SESSION['password'] = $_POST["password1"];
