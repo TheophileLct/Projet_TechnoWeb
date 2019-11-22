@@ -19,11 +19,9 @@
 
             if(isset($_POST['quantity'])){
                 $quantity=$_POST['quantity'];
-                echo $quantity;
                 
                 try {
                     if($quantity == 0){
-                        echo ("ok");
                         $req4 = $conn->prepare('DELETE FROM order_products WHERE (product_id = '.$id_produit.' AND order_id = '.$orderid.')');
                     }else{
                         $req4 = $conn->prepare('UPDATE order_products SET quantity = '.$quantity.' WHERE (product_id = '.$id_produit.' AND order_id = '.$orderid.')');
