@@ -46,8 +46,6 @@
         <a href="index.php?page=product" style="text-decoration: none ; color: white" class=test> Products </a>
         <?php
 
-        session_start();
-
         if ($_SESSION['login']) {
                 echo ('<a href="index.php?page=myaccount" style="text-decoration: none; color: white" class=test> My account </a>');
                 }

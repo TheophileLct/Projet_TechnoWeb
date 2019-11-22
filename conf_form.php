@@ -7,7 +7,6 @@ $password1 = $_POST["password"];
 
 
 try {
-    include "bdd.php";
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "INSERT INTO users (username,email,password)
     VALUES ('$username1','$email', '$password1')";

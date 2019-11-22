@@ -1,8 +1,7 @@
 <?php
 
     try {
-        session_start ();
-        include "bdd.php";
+    
         $NOM = $_SESSION['login'];
         $req = $conn->prepare('SELECT id FROM users WHERE username = ?');
         $req->execute(Array($NOM));
