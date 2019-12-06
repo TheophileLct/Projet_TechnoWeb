@@ -34,12 +34,12 @@
         $req1 = $conn->prepare('SELECT name, description, products.unit_price, order_products.quantity, products.id FROM products, order_products, orders WHERE (orders.type = "ORDER" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.id = ?)');
         $req1->execute(Array($orderid));
 
-    $req2 = $conn->prepare('SELECT SUM(products.unit_price*order_products.quantity) FROM products, order_products, orders WHERE (orders.type = "ORDER" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
-    $req2->execute(array($donnees[0]));
+    $req2 = $conn->prepare('SELECT SUM(products.unit_price*order_products.quantity) FROM products, order_products, orders WHERE (orders.type = "ORDER" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.id = ?)');
+    $req2->execute(array($orderid));
     $Price_Total = $req2->fetch();
 
-    $req3 = $conn->prepare('SELECT SUM(order_products.quantity) FROM products, order_products, orders WHERE (orders.type = "ORDER" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.user_id = ?)');
-    $req3->execute(array($donnees[0]));
+    $req3 = $conn->prepare('SELECT SUM(order_products.quantity) FROM products, order_products, orders WHERE (orders.type = "ORDER" AND order_products.order_id = orders.id AND products.id = order_products.product_id AND orders.id = ?)');
+    $req3->execute(array($orderid));
     $Quantity = $req3->fetch();
 } catch (PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
