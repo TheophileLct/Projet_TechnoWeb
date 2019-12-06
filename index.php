@@ -49,6 +49,10 @@ if (!empty($_GET)&&!empty($_GET['page'])){
 		include('product_3.php');
 	}elseif($_GET['page']==='logout'){
 		include('logout.php');
+	}elseif($_GET['page']==='order_list'){
+		include('order_list.php');
+	}elseif($_GET['page']==='order_details'){
+		include('order_details.php');
 	}
 
 }else {

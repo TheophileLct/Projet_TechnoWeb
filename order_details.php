@@ -70,15 +70,9 @@ $conn = null;
                 <?php $href = "product_" . $data["id"] . ".php" ?>
                 <?php $dest = "index.php?page=product_".$data["id"] ?>
                 <h1><a href=<?php echo $dest?> style="text-decoration: none ; color: black"> <?php echo $data["name"] ?> </a></h1>
-                <div class="size">Size:
+                <div class="size">Prix:
                     <FORM>
-                        <SELECT name="size" size="1">
-                            <OPTION>90B
-                            <OPTION>90C
-                            <OPTION>90D
-                            <OPTION selected>90E
-                            <OPTION>90F
-                        </SELECT>
+                        
                     </FORM>
                 </div>
                 <div class="price"> <?php echo $data["unit_price"]?>€ </div>

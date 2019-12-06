@@ -47,15 +47,14 @@
 <?php
 
         if (!empty($_SESSION['login'])) {
-                echo ('<a href="index.php?page=myaccount" style="text-decoration: none; color: white" class=test> My account </a>');
+                echo ('<a href="index.php?page=myaccount" style="text-decoration: none; color: white" class=test> My account </a><a href="index.php?page=cart" style="text-decoration: none ; color: white" class=test> Cart</a><a href="index.php?page=order_list" style="text-decoration: none ; color: white" class=test> Order</a>');
+                }
+
+        if (empty($_SESSION['login'])) {
+                echo ('<a href="index.php?page=account" style="text-decoration: none; color: white" classe=test> Login/Sign In </a>');
                 }
 ?>
-        <a href="index.php?page=account" style="text-decoration: none; color: white" classe=test> Login/Sign In </a>
-        <a href="index.php?page=cart" style="text-decoration: none ; color: white" class=test> Cart</a>
     </div>
-
-
-
 
 </body>
 
